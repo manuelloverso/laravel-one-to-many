@@ -14,6 +14,9 @@
                         </div>
                         <div class="card-body">
                             <h3 class="text-uppercase">{{ $project->title }}</h3>
+                            <p><strong>Type:
+                                </strong>{{ $project->type ? $project->type->name : 'There are no types linked to this project' }}
+                            </p>
                             <p><strong>Description: </strong>{{ $project->description }}</p>
                             <p><strong>Technologies: </strong>{{ $project->technologies }}</p>
                             <p><strong>Created: </strong>{{ $project->date }}</p>

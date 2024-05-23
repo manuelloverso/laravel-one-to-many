@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $projects = Project::all();
-    return view('home', compact('projects'));
+    $types = Type::all();
+    return view('home', compact('projects', 'types'));
 });
 
 // this one groups all the routes that need to be protected by the authentication
