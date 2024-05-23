@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container text-white py-3">
-        @include('partials.validate-errors')
         <h1>Add a new Project</h1>
+        @include('partials.validate-errors')
         <form action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
             @csrf {{-- this is a laravel directive to protect your application from cross-site request forgery --}}
 

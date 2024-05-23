@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container text-white py-3">
+        <h1>Edit {{ $project->title }}</h1>
         @include('partials.validate-errors')
 
         <form action="{{ route('admin.projects.update', $project) }}" method="post" enctype="multipart/form-data">
