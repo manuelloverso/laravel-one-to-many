@@ -14,7 +14,8 @@ class TypeController extends Controller
      */
     public function index()
     {
-        //
+        $types = Type::all();
+        return view('admin.types.index', compact('types'));
     }
 
     /**
@@ -22,7 +23,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.types.create');
     }
 
     /**
@@ -38,7 +39,7 @@ class TypeController extends Controller
      */
     public function show(Type $type)
     {
-        //
+        // LEAVING THIS EMPTY AS THERE IS NOTHING TO SHOW, THE TYPE ONLY HAS A NAME
     }
 
     /**
