@@ -17,8 +17,9 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Image </th>
+                        <th scope="col">Image</th>
                         <th style="width: 25%" scope="col">Description</th>
+                        <th scope="col">Type</th>
                         <th scope="col">Technologies</th>
                         <th scope="col">Date</th>
                         <th scope="col">Actions</th>
@@ -38,6 +39,8 @@
                                 @endif
                             </td>
                             <td>{{ $project->description }}</td>
+                            <td>{{ $project->type ? $project->type->name : 'There are no types linked to this project' }}
+                            </td>
                             <td>{{ $project->technologies }}</td>
                             <td>{{ $project->date }}</td>
                             <td>

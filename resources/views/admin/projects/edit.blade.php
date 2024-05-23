@@ -28,6 +28,20 @@
                 @enderror
             </div>
 
+            {{-- Type Input --}}
+            <div class="mb-3">
+                <label for="type_id" class="form-label">Type</label>
+                <select class="form-select form-select" name="type_id" id="type_id">
+                    <option disabled selected>Select a type</option>
+                    @foreach ($types as $type)
+                        <option class="text-uppercase" value="{{ $type->id }}"
+                            {{ $type->id == old('type_id', $project->type_id) ? 'selected' : '' }}>
+                            {{ $type->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
             {{-- technologies input --}}
             <div class="mb-3">
                 <label for="technologies" class="form-label ">technologies</label>
