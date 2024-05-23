@@ -25,9 +25,9 @@
 
                             <td>
                                 {{-- NOT SHOWING THE SINGLE TYPE AS THERE IS NOTHING TO SHOW --}}
-                                {{-- <a class="btn btn-dark" href="{{ route('admin.projects.edit', $project) }}"><i
+                                <a class="btn btn-dark" href="{{ route('admin.types.edit', $type) }}"><i
                                         class="fa-solid fa-pencil "></i></a>
-                                @include('partials.delete-modal') --}}
+                                {{-- @include('partials.delete-modal') --}}
                             </td>
                         </tr>
                     @empty
