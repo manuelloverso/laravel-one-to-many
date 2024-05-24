@@ -18,7 +18,7 @@
             <tbody>
                 @forelse ($types as $type)
                     <tr class="">
-                        <td scope="row">{{ $type->id }}</td>
+                        <td scope="row"><strong>{{ $type->id }}</strong></td>
                         <td>{{ $type->name }}</td>
 
 

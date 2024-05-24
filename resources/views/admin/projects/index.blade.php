@@ -31,7 +31,7 @@
             <tbody>
                 @forelse ($projects as $project)
                     <tr class="">
-                        <td scope="row">{{ $project->id }}</td>
+                        <td scope="row"><strong>{{ $project->id }}</strong></td>
                         <td>{{ $project->title }}</td>
                         <td>
                             @if (str_starts_with($project->image, 'uploads/'))
