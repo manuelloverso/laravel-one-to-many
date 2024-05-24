@@ -26,14 +26,17 @@
 
 <body>
     <div id="app">
+        <div class="admin-projects-index d-flex ">
+            {{-- @include('partials.header') --}}
+            {{-- side-bar with links --}}
+            @include('partials.side-bar')
 
-
-        {{-- @include('partials.header') --}}
-
-        <main class="">
-            @yield('content')
-        </main>
+            <main class="text-white py-3">
+                @yield('content')
+            </main>
+        </div>
     </div>
+
 </body>
 
 </html>
